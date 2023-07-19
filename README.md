@@ -35,10 +35,7 @@
 5. Login to the EC2 instance using terminal
 
 
-# Installing the CodeDeploy agent for Ubuntu Server
-
-
-6. Install the below commands
+6. Installing the CodeDeploy agent for Ubuntu Server follow the below commands
 ```
 sudo apt update
 ```
