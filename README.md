@@ -114,6 +114,18 @@ sudo service codedeploy-agent status
 
 20. Now go to the source repository which has the CodePipeline starting stage -> Create a commit -> Now the pipeline has to be triggered
 
+![cicd](https://github.com/Pavan-1997/AWS_CodePipeline_CI_CD/assets/32020205/021832fb-ab24-4aac-8c8b-fffd08aa1585)
 
+Verifying the docker image that is pushed during Build stage
+
+![dockerhub](https://github.com/Pavan-1997/AWS_CodePipeline_CI_CD/assets/32020205/706360ba-6258-4672-a151-1b49146c85e1)
+
+Since the final deployment is on Docker installed on EC2, checking the Docker images that is pulled from the Deploy stage using the start_container.sh script
+
+![image](https://github.com/Pavan-1997/AWS_CodePipeline_CI_CD/assets/32020205/53a00805-48be-4e4f-b3f6-8dd57f9a3833)
+
+Checking the docker conatiner that is created from the Deploy stage using the start_container.sh script
+
+![image](https://github.com/Pavan-1997/AWS_CodePipeline_CI_CD/assets/32020205/903560f1-6ff4-447f-9b8c-85f51f9d7bf7)
 
 
