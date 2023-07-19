@@ -19,17 +19,17 @@
 
 4. Now goto EC2 from AWS Console -> Click on Launch instance
 
-Give a name 
-
-Use Ubuntu as an image
-
-Instance type as t2.micro
-
-Create a key pair if already present use existing one
-
-Click on Launch instance
-
-* Using tags helps in management and isolation of the AWS resources
+    Give a name 
+    
+    Use Ubuntu as an image
+    
+    Instance type as t2.micro
+    
+    Create a key pair if already present use existing one
+    
+    Click on Launch instance
+    
+    * Using tags helps in management and isolation of the AWS resources
 
 
 5. Login to the EC2 instance using terminal
@@ -39,22 +39,26 @@ Click on Launch instance
 
 
 6. Install the below commands
-
+```
 sudo apt update
-
+```
+```
 sudo apt install ruby-full
-
+```
+```
 sudo apt install wget
-
+```
 
 7. Getting the resources for installing the Agent(runner)
 
-wget https://bucket-name.s3.region-identifier.amazonaws.com/latest/install
+    wget https://bucket-name.s3.region-identifier.amazonaws.com/latest/install
+    
+    bucket-name is the name of the Amazon S3 bucket that contains the CodeDeploy Resource Kit files for your region, and region-identifier is the identifier for your region. (This is for low latency download of resources)
 
-bucket-name is the name of the Amazon S3 bucket that contains the CodeDeploy Resource Kit files for your region, and region-identifier is the identifier for your region. (This is for low latency download of resources)
-
-New command -> wget https://aws-codedeploy-us-east-2.s3.us-east-2.amazonaws.com/latest/install
-
+     Updated command ->
+```
+wget https://aws-codedeploy-us-east-2.s3.us-east-2.amazonaws.com/latest/install
+```
 
 8. Give permission to install script 
 
