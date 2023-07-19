@@ -29,7 +29,7 @@
     
     Click on Launch instance
     
-    * Using tags helps in management and isolation of the AWS resources
+   ** Using tags helps in the management and isolation of the AWS resources
 
 
 5. Login to the EC2 instance using terminal
