@@ -61,41 +61,42 @@ wget https://aws-codedeploy-us-east-2.s3.us-east-2.amazonaws.com/latest/install
 ```
 
 8. Give permission to install script 
-
+```
 chmod +x ./install
-
+```
 
 9. Install the runner
-
+```
 sudo ./install auto
-
+```
 
 10. Start the service for the agent
-
+```
 sudo service codedeploy-agent start
-
+```
 
 11. Check the status of the service 
-
+```
 sudo service codedeploy-agent status
-
+```
 
 12. Giving permission to EC2 to communicate to AWS CodeDeploy
 
-Goto IAM -> Goto Role -> Create Role -> Use case - EC2 -> Select CodeDeploy and Check CodeDeploy below -> Click on Next -> Click on Next -> Provide Role name -> Click on Create role
+    Goto IAM -> Goto Role -> Create Role -> Use case - EC2 -> Select CodeDeploy and Check CodeDeploy below -> Click on Next -> Click on Next -> Provide Role name -> Click on Create role
 
 
-***13. Now goto EC2 -> Actions -> Security -> Moodify IAM role -> Select the newly created IAM role 
+13. Now goto EC2 -> Actions -> Security -> Moodify IAM role -> Select the newly created IAM role 
 
 
 14. Goto EC2 terminal and restart the agent service and verify
-
+```
 sudo service codedeploy-agent restart
-
+```
+```
 sudo service codedeploy-agent status
+```
 
-
-***15. Now goto back to CodeDeploy -> Expand Deploy on the left pane -> Select Applications -> Select the created application that we did in Step 3. -> Goto Deployment groups -> Click on Create deployment group -> Give Deployment group name -> For service role modify the role that we have created in Step 12. and add AmazonEC2FullAccess or create a new role and attach it ->  In Enviroment configuration select Amazon EC2 instances and select the Instance created from Key and Value -> Unselect the Load Balancer -> Click on Create deployment group 
+15. Now goto back to CodeDeploy -> Expand Deploy on the left pane -> Select Applications -> Select the created application that we did in Step 3. -> Goto Deployment groups -> Click on Create deployment group -> Give Deployment group name -> For service role modify the role that we have created in Step 12. and add AmazonEC2FullAccess or create a new role and attach it ->  In Environment configuration select Amazon EC2 instances and select the Instance created from Key and Value -> Unselect the Load Balancer -> Click on Create deployment group 
 
 
 16. Now goto back to CodeDeploy -> Expand Deploy on the left pane -> Select Applications -> Select the created application that we did in Step 3. -> Goto Deployments -> Click on Create deployment -> Select Deployment group created in Step 15. -> Select Revision type as My application is stored in GitHub -> Give github account name in GitHub token name and click on Connect to GitHub -> Authorize it -> Now give Repository name - <GithubUserName>/<RepoName> -> Commit ID - Provide latest commit ID from the GitHub Repo -> Click on create deployment
