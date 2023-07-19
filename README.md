@@ -104,9 +104,9 @@ sudo service codedeploy-agent status
 
 17. The deployment will fail since docker ins not installed
 
-Goto EC2 -> Run the below command
-
-sudo apt install docker.io -y
+    Goto EC2 -> Run the below command
+    
+    sudo apt install docker.io -y
 
 
 18. Now goto Step 16. you already have failed deployment just click on Retry deployment
@@ -115,7 +115,8 @@ sudo apt install docker.io -y
 19. Now goto CodePipeline -> Click on the pipleline that was created earlier (GOTO REPO AWS_CodePipeline_CI) -> Click on Edit -> Click on Add stage -> Give Stage name -> Click on Add stage -> Click on Add action group -> Give name to Action name -> Action Provide -AWS CodeDeploy -> Input Artifacts - BuildArtifact -> Select the created Application name -> Select the created deployment group -> Click on Done -> Click on save
 
 
-20. Now go to the source repository which has the CodePipeline starting stage -> Create a commit -> Now the pipeline has to be triggered -> Eventually it fails ate CodeDeploy
+20. Now go to the source repository which has the CodePipeline starting stage -> Create a commit -> Now the pipeline has to be triggered
 
-The reason for it to fail is because we have already triggered the CodeDeploy in Step 18. which has binded a port and the docker container is running, Hence the CodePipeline will re-run the CodeDeploy again which causes it to fail
+
+
 
