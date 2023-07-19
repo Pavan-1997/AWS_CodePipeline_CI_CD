@@ -1,6 +1,6 @@
 # AWS CodePipeline CI/CD
 
-# Please go to Repo - AWS_CodePipeline_CI (https://github.com/Pavan-1997/AWS_CodePipeline_CI) and implement the CI and then follow this repo for CI/CD
+**Please go to Repo - AWS_CodePipeline_CI (https://github.com/Pavan-1997/AWS_CodePipeline_CI) and implement the CI and then follow this repo for CI/CD**
 
 ![image](https://github.com/Pavan-1997/AWS_CodePipeline_CI_CD/assets/32020205/942175aa-ec47-4d81-b12e-1bef26f3a270)
 
@@ -29,7 +29,7 @@
     
     Click on Launch instance
     
-   ** Using tags helps in the management and isolation of the AWS resources
+    **Using tags helps in the management and isolation of the AWS resources**
 
 
 5. Login to the EC2 instance using terminal
